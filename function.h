@@ -20,8 +20,8 @@ using namespace std;
 
 #define SIZE_PIXEL 50
 
-#define MAX_MAP_X 20
-#define MAX_MAP_Y 20
+#define MAX_MAP_X 30
+#define MAX_MAP_Y 24
 
 #define MAX_TYPE_PIXEL 20
 

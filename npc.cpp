@@ -360,9 +360,14 @@ void NPC::Move(Map& game_map, SmartMap& map_smart) {
 
 
 	if (input_type_.Sum() > 1) {
-
+		int a;
+		if (kieure.size() == 3) {
+			a = map_smart.Specail(x_pos_, y_pos_, kieure[0], kieure[1], kieure[2]);
+		}
+		else {
+			a = map_smart.Compare(x_pos_, y_pos_, kieure[0], kieure[1]);
+		}
 		
-		int a = map_smart.Compare(x_pos_, y_pos_, kieure[0], kieure[1]);
 		//int a = rand() % 2;
 		Re(a);
 		map_smart.NumberNpc(x_pos_, y_pos_, a);
@@ -375,9 +380,14 @@ void NPC::Move(Map& game_map, SmartMap& map_smart) {
 }
 
 bool NPC::LoseNPC(int x, int y) {
-	if ((x / SIZE_PIXEL == x_pos_ / SIZE_PIXEL && y / SIZE_PIXEL == y_pos_ / SIZE_PIXEL) || (x / SIZE_PIXEL == x_pos_vir_ / SIZE_PIXEL && y / SIZE_PIXEL == y_pos_vir_ / SIZE_PIXEL)) {
+	int x1 = x + SIZE_PIXEL - 1;
+	int y1 = y + SIZE_PIXEL - 1;
+	if ((x_pos_ >= x && x_pos_ <= x1 && y_pos_ >= y && y_pos_ <= y1) || (x_pos_vir_ >= x && x_pos_vir_ <= x1 && y_pos_vir_ >= y && y_pos_vir_ <= y1) ) {
 		return true;
 	}
+	//if ((x / SIZE_PIXEL == x_pos_ / SIZE_PIXEL && y / SIZE_PIXEL == y_pos_ / SIZE_PIXEL) || (x / SIZE_PIXEL == x_pos_vir_ / SIZE_PIXEL && y / SIZE_PIXEL == y_pos_vir_ / SIZE_PIXEL)) {
+		//return true;
+	//}
 	else return false;
 }
 

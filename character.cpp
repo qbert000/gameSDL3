@@ -1,8 +1,8 @@
 #include"character.h"
 
 Character::Character() {
-	x_pos_ = SIZE_PIXEL*0;
-	y_pos_ = SIZE_PIXEL*19;
+	x_pos_ = SIZE_PIXEL*13;
+	y_pos_ = SIZE_PIXEL*11;
 
 	x_pos_old_ = x_pos_;
 	y_pos_old_ = y_pos_;

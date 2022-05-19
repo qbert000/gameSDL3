@@ -39,6 +39,9 @@
     <ClCompile Include="Cham.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="fire.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="function.h">
@@ -60,6 +63,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SmartMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fire.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

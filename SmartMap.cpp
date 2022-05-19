@@ -84,10 +84,38 @@ int SmartMap::Compare(int x, int y, int a1, int a2) {
 			if (k == 0) return a1;
 			else return a2;
 		}
-		
-		
 	}
-	
+}
+
+int SmartMap::Specail(int x, int y, int a1, int a2, int a3) {
+	if (map_smart_[y / SIZE_PIXEL][x / SIZE_PIXEL].number_turn_[a1] == map_smart_[y / SIZE_PIXEL][x / SIZE_PIXEL].number_turn_[a2] &&
+		map_smart_[y / SIZE_PIXEL][x / SIZE_PIXEL].number_turn_[a1] == map_smart_[y / SIZE_PIXEL][x / SIZE_PIXEL].number_turn_[a3]) {
+		int k = rand() % 3;
+		if (k == 0) return a1;
+		else if (k == 1) return a2;
+		else return a3;
+	}
+	else {
+		if (map_smart_[y / SIZE_PIXEL][x / SIZE_PIXEL].number_turn_[a1] == 0 &&
+			map_smart_[y / SIZE_PIXEL][x / SIZE_PIXEL].number_turn_[a2] == 0) return Compare(x, y, a1, a2);
+		else if (map_smart_[y / SIZE_PIXEL][x / SIZE_PIXEL].number_turn_[a1] == 0 &&
+			map_smart_[y / SIZE_PIXEL][x / SIZE_PIXEL].number_turn_[a2] == 0) return Compare(x, y, a1, a3);
+		else if (map_smart_[y / SIZE_PIXEL][x / SIZE_PIXEL].number_turn_[a2] == 0 &&
+			map_smart_[y / SIZE_PIXEL][x / SIZE_PIXEL].number_turn_[a3] == 0) return Compare(x, y, a2, a3);
+
+		else if (map_smart_[y / SIZE_PIXEL][x / SIZE_PIXEL].number_turn_[a1] == 1 &&
+			map_smart_[y / SIZE_PIXEL][x / SIZE_PIXEL].number_turn_[a2] == 1) return a3;
+		else if (map_smart_[y / SIZE_PIXEL][x / SIZE_PIXEL].number_turn_[a2] == 1 &&
+			map_smart_[y / SIZE_PIXEL][x / SIZE_PIXEL].number_turn_[a3] == 1) return a1;
+		else if (map_smart_[y / SIZE_PIXEL][x / SIZE_PIXEL].number_turn_[a1] == 1 &&
+			map_smart_[y / SIZE_PIXEL][x / SIZE_PIXEL].number_turn_[a3] == 1) return a2;
+		else {
+			int k = rand() % 3;
+			if (k == 0) return a1;
+			else if (k == 1) return a2;
+			else return a3;
+		}
+	}
 }
 
 

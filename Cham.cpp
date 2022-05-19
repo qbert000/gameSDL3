@@ -7,6 +7,17 @@ Cham::Cham() {
 		}
 	}
 	status_ = false;
+
+	pos_[8][1] = false;
+	pos_[20][3] = false;
+	pos_[22][19] = false;
+	pos_[13][25] = false;
+	pos_[10][13] = false;
+	pos_[10][12] = false;
+	pos_[10][14] = false;
+	pos_[10][15] = false;
+	pos_[9][13] = false;
+
 }
 
 bool Cham::LoadImg(string path, SDL_Renderer* screen) {

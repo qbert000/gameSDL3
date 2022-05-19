@@ -12,6 +12,7 @@ public:
 	void NumberNpc(int x, int y, int a);
 	void DownChar(int x, int y, int a);
 	int Compare(int x, int y, int a1, int a2);
+	int Specail(int x, int y, int a1, int a2, int a3);
 	void CoutMap(int x, int y);
 private:
 

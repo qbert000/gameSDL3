@@ -145,6 +145,7 @@
     <ClCompile Include="background.cpp" />
     <ClCompile Include="Cham.cpp" />
     <ClCompile Include="character.cpp" />
+    <ClCompile Include="fire.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="function.cpp" />
     <ClCompile Include="npc.cpp" />
@@ -155,6 +156,7 @@
     <ClInclude Include="background.h" />
     <ClInclude Include="Cham.h" />
     <ClInclude Include="character.h" />
+    <ClInclude Include="fire.h" />
     <ClInclude Include="function.h" />
     <ClInclude Include="SmartMap.h" />
     <ClInclude Include="npc.h" />
